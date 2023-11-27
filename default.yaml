@@ -5,12 +5,12 @@ device: "cuda"
 random_seed: 42 # Random seed to use
 
 directories:
-  model_path1: "/home/gryphe/merge-monster/models/Mistral-7B-v0.1" # Path to the base model
-  model_directory: "/home/gryphe/merge-monster/models/" # Directory of models to scan, IGNORED if models_to_merge has entries in it
-  output_directory: "/home/gryphe/merge-monster/mm-output" # Output directory of the merged model
+  model_path1: "Minirecord/Mini_synatra_7b_02" # Path to the base model
+  model_directory: "./MM_l" # Directory of models to scan, IGNORED if models_to_merge has entries in it
+  output_directory: "./MM_output" # Output directory of the merged model
 
 # A list of models to use as merge candidates - HF syntax, so can be either local directories or repo's
-models_to_merge: ["jondurbin/airoboros-m-7b-3.1.2", "Intel/neural-chat-7b-v3-1", "teknium/OpenHermes-2.5-Mistral-7B"]
+models_to_merge: ["maywell/Synatra-7B-v0.3-dpo", "maywell/koOpenChat-sft", "Intel/neural-chat-7b-v3-1", "BM-K/mistral-7b-it-v1.7.0"]
 
 # Merge ratios used for testing each layer's potential for improvement - Huge impact on total running time
 merge_ratios: [0.2, 0.4, 0.6, 0.8]

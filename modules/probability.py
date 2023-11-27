@@ -98,4 +98,4 @@ def calculate_word_probabilities(model, tokenizer, bad_phrases, good_phrases, de
         torch.cuda.empty_cache()
         gc.collect()
 
-    return phrase_probs
+    return phrase_probs #Good 의 확률이 적어지도록 유도? DPO처럼 Merge 가능성. Bad에 RP에 더해 복잡한 추론 포함, GOOD에 복잡하기만 하고 잘못된 정보넣기?
